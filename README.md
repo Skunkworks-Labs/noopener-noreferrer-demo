@@ -6,7 +6,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/Skunkworks-Lab-Services/noopener-noreferrer-demo)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/Skunkworks-Lab-Services/noopener-noreferrer-demo)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Skunkworks-Lab-Services/noopener-noreferrer-demo)
-[![CI](https://github.com/Skunkworks-Lab-Services/noopener-noreferrer-demo/actions/workflows/ci.yml/badge.svg)](https://github.com/Skunkworks-Lab-Services/noopener-noreferrer-demo/actions/workflows/ci.yml)
+![CI](https://github.com/Skunkworks-Lab-Services/noopener-noreferrer-demo/actions/workflows/ci.yml/badge.svg)(https://github.com/Skunkworks-Lab-Services/noopener-noreferrer-demo/actions/workflows/ci.yml)
 
 ## Overview
 
