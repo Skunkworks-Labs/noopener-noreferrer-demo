@@ -1,39 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>noopener noreferrer Example</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Try it Yourself: Adding rel="noopener noreferrer"</h1>
-    <p>Open the link below in a new tab and observe the behavior:</p>
-    <a href="https://www.example.com" target="_blank">Open Example without noreferrer</a>
-    <br><br>
-    <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">Open Example with noreferrer</a>
+name: CI
 
-    <h2>Why use rel="noopener noreferrer"?</h2>
-    <p>Using <code>rel="noopener noreferrer"</code> prevents the new page from being able to access the <code>window.opener</code> property and ensures it runs in a separate process. This is particularly important for security and performance reasons.</p>
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
-    <h2>Try It Yourself:</h2>
-    <textarea id="code" rows="10" cols="50">
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>noopener noreferrer Example</title>
-</head>
-<body>
-    <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">Open Example</a>
-</body>
-</html>
-    </textarea>
-    <br>
-    <button onclick="runCode()">Run Code</button>
-    <iframe id="output" style="width: 100%; height: 200px; border: 1px solid black;"></iframe>
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-    <script src="script.js"></script>
-</body>
-</html>
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: |
+        npm install -g htmlhint stylelint jshint || {
+          echo "Dependency installation failed";
+          exit 1;
+        }
+
+    - name: Lint HTML
+      run: |
+        htmlhint "index.html" || {
+          echo "HTML linting failed";
+          exit 1;
+        }
+
+    - name: Lint CSS
+      run: |
+        stylelint "**/*.css" || {
+          echo "CSS linting failed";
+          exit 1;
+        }
+
+    - name: Lint JavaScript
+      run: |
+        jshint "script.js" || {
+          echo "JavaScript linting failed";
+          exit 1;
+        }
+
+    - name: Check for Broken Links
+      run: |
+        npm install -g broken-link-checker
+        blc http://localhost --follow --exclude linkedin.com || {
+          echo "Broken link check failed";
+          exit 1;
+        }
+
+    - name: Check HTML Validity
+      run: |
+        npm install -g vnu-jar
+        vnu-jar --skip-non-html "index.html" || {
+          echo "HTML validity check failed";
+          exit 1;
+        }
+
+    - name: Verify Successful Execution
+      run: echo "CI process completed successfully"
