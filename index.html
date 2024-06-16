@@ -1,41 +1,46 @@
-# noopener-noreferrer-demo
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>noopener noreferrer Example</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://github.com/skunkworksza/Media/blob/main/logo-skunkworks-trans%2040%20%C3%97%2040%20px.png?raw=true">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="https://github.com/skunkworksza/Media/blob/main/skunkworks-logo%20-%20Copy.png?raw=true" alt="Skunkworks Logo" class="logo">
+            <h1>Try it Yourself: Adding rel="noopener noreferrer"</h1>
+        </header>
+        <main>
+            <p>Open the link below in a new tab and observe the behavior:</p>
+            <a href="https://www.example.com" target="_blank">Open Example without noreferrer</a>
+            <br><br>
+            <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">Open Example with noreferrer</a>
 
-![GitHub license](https://img.shields.io/github/license/Skunkworks-Lab-Services/noopener-noreferrer-demo)
-![GitHub stars](https://img.shields.io/github/stars/Skunkworks-Lab-Services/noopener-noreferrer-demo)
-![GitHub issues](https://img.shields.io/github/issues/Skunkworks-Lab-Services/noopener-noreferrer-demo)
-![GitHub forks](https://img.shields.io/github/forks/Skunkworks-Lab-Services/noopener-noreferrer-demo)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/Skunkworks-Lab-Services/noopener-noreferrer-demo)
-![GitHub last commit](https://img.shields.io/github/last-commit/Skunkworks-Lab-Services/noopener-noreferrer-demo)
+            <h2>Why use rel="noopener noreferrer"?</h2>
+            <p>Using <code>rel="noopener noreferrer"</code> prevents the new page from being able to access the <code>window.opener</code> property and ensures it runs in a separate process. This is particularly important for security and performance reasons.</p>
 
-![Skunkworks Company Logo](https://github.com/skunkworksza/Media/blob/main/skunkworks-logo%20-%20Copy.png?raw=true)
-
-A hands-on interactive demo to learn and experiment with adding `rel="noopener noreferrer"` to links. This repository provides an interactive HTML example, along with the necessary scripts and styles to create a secure and performant web experience.
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Example](#example)
-- [Contributing](#contributing)
-- [License](#license)
-- [Call-Outs](#call-outs)
-- [Columns](#columns)
-
-## Overview
-
-A hands-on interactive demo to learn and experiment with adding `rel="noopener noreferrer"` to links. This repository provides an interactive HTML example, along with the necessary scripts and styles to create a secure and performant web experience.
-
-## Features
-
-- **Interactive Demo**: Experiment with adding `rel="noopener noreferrer"` to links and see the effects in real-time.
-- **Security Best Practices**: Learn why and how to use `rel="noopener noreferrer"` to enhance security.
-- **Responsive Design**: A simple and clean design that works well on all devices.
-
-## Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/Skunkworks-Lab-Services/noopener-noreferrer-demo.git
-cd noopener-noreferrer-demo
+            <h2>Try It Yourself:</h2>
+            <textarea id="code" rows="10" cols="50">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>noopener noreferrer Example</title>
+</head>
+<body>
+    <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">Open Example</a>
+</body>
+</html>
+            </textarea>
+            <br>
+            <button onclick="runCode()">Run Code</button>
+            <iframe id="output" style="width: 100%; height: 200px; border: 1px solid black;"></iframe>
+        </main>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
