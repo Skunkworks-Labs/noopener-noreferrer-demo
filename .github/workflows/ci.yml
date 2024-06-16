@@ -19,7 +19,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '18'  # Update to Node.js 18
+        node-version: '18'
 
     - name: Install dependencies
       run: |
@@ -35,9 +35,6 @@ jobs:
           echo '{
             "extends": "stylelint-config-standard",
             "rules": {
-              "indentation": 2,
-              "number-leading-zero": "always",
-              "string-quotes": "double",
               "color-function-notation": "modern",
               "alpha-value-notation": "percentage",
               "media-feature-range-notation": "context"
