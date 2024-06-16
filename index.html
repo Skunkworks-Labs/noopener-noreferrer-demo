@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>noopener noreferrer Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Try it Yourself: Adding rel="noopener noreferrer"</h1>
+    <p>Open the link below in a new tab and observe the behavior:</p>
+    <a href="https://www.example.com" target="_blank">Open Example without noreferrer</a>
+    <br><br>
+    <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">Open Example with noreferrer</a>
+
+    <h2>Why use rel="noopener noreferrer"?</h2>
+    <p>Using <code>rel="noopener noreferrer"</code> prevents the new page from being able to access the <code>window.opener</code> property and ensures it runs in a separate process. This is particularly important for security and performance reasons.</p>
+
+    <h2>Try It Yourself:</h2>
+    <textarea id="code" rows="10" cols="50">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>noopener noreferrer Example</title>
+</head>
+<body>
+    <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">Open Example</a>
+</body>
+</html>
+    </textarea>
+    <br>
+    <button onclick="runCode()">Run Code</button>
+    <iframe id="output" style="width: 100%; height: 200px; border: 1px solid black;"></iframe>
+
+    <script src="script.js"></script>
+</body>
+</html>
