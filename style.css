@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: 'IBM Plex Sans', sans-serif;
     margin: 0;
@@ -10,6 +11,7 @@ body {
     overflow: hidden;
 }
 
+/* Container Styles */
 .container {
     background: white;
     border-radius: 8px;
@@ -25,6 +27,7 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Header Styles */
 .header {
     background-color: #0f62fe;
     color: white;
@@ -38,7 +41,8 @@ body {
     margin-bottom: 20px;
 }
 
-.header::before, .header::after {
+.header::before,
+.header::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -57,10 +61,12 @@ body {
     right: -25px;
 }
 
+/* Main Styles */
 main {
     padding: 20px;
 }
 
+/* Textarea Styles */
 textarea {
     width: 100%;
     margin-top: 10px;
@@ -77,6 +83,7 @@ textarea:focus {
     outline: none;
 }
 
+/* Button Styles */
 button {
     background-color: #0f62fe;
     color: white;
@@ -97,6 +104,7 @@ button:active {
     transform: translateY(1px);
 }
 
+/* Example Link Styles */
 .example-link {
     display: inline-block;
     margin: 10px 0;
@@ -134,6 +142,7 @@ button:active {
     transform: translateY(0);
 }
 
+/* Message Styles */
 #message.success {
     background-color: #d4edda;
     color: #155724;
@@ -144,8 +153,10 @@ button:active {
     color: #721c24;
 }
 
+/* Responsive Styles */
 @media (max-width: 600px) {
-    .header, main {
+    .header,
+    main {
         padding: 15px;
     }
 
@@ -153,7 +164,8 @@ button:active {
         width: 100px;
     }
 
-    .header::before, .header::after {
+    .header::before,
+    .header::after {
         display: none;
     }
 }
