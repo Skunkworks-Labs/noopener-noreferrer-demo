@@ -23,7 +23,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        npm install -g htmlhint stylelint jshint || {
+        npm install -g htmlhint stylelint jshint broken-link-checker vnu-jar || {
           echo "Dependency installation failed";
           exit 1;
         }
@@ -51,7 +51,6 @@ jobs:
 
     - name: Check for Broken Links
       run: |
-        npm install -g broken-link-checker
         blc http://localhost --follow --exclude linkedin.com || {
           echo "Broken link check failed";
           exit 1;
@@ -59,7 +58,6 @@ jobs:
 
     - name: Check HTML Validity
       run: |
-        npm install -g vnu-jar
         vnu-jar --skip-non-html "index.html" || {
           echo "HTML validity check failed";
           exit 1;
