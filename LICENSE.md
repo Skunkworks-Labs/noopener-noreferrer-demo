@@ -1,4 +1,4 @@
-MIT License
+#MIT License
 
 Copyright (c) 2024 Skunkworks Lab Services, A division od Skunkworks (Pty) Ltd
 
@@ -10,16 +10,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ---
 
-Permissions
+## Permissions
 - Commercial use
 - Modification
 - Distribution
 - Private use
 
-Limitations
+## Limitations
 - Liability
 - Warranty
 
-Conditions
+## Conditions
 - License and copyright notice
 
