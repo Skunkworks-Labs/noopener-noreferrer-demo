@@ -1,9 +1,6 @@
 {
   "extends": "stylelint-config-standard",
   "rules": {
-    "indentation": 2,
-    "number-leading-zero": "always",
-    "string-quotes": "double",
     "color-function-notation": "modern",
     "alpha-value-notation": "percentage",
     "media-feature-range-notation": "context"
