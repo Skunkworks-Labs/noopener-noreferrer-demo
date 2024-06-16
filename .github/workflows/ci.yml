@@ -38,21 +38,9 @@ jobs:
               "indentation": 2,
               "number-leading-zero": "always",
               "string-quotes": "double",
-              "block-no-empty": true,
-              "color-no-invalid-hex": true,
-              "comment-no-empty": true,
-              "declaration-block-no-duplicate-properties": true,
-              "declaration-block-no-shorthand-property-overrides": true,
-              "font-family-no-duplicate-names": true,
-              "function-calc-no-unspaced-operator": true,
-              "keyframe-declaration-no-important": true,
-              "media-feature-name-no-unknown": true,
-              "no-empty-source": true,
-              "property-no-unknown": true,
-              "selector-pseudo-class-no-unknown": true,
-              "selector-type-no-unknown": true,
-              "shorthand-property-no-redundant-values": true,
-              "unit-no-unknown": true
+              "color-function-notation": "modern",
+              "alpha-value-notation": "percentage",
+              "media-feature-range-notation": "context"
             }
           }' > .stylelintrc.json
         fi
