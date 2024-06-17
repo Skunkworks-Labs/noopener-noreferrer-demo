@@ -1,6 +1,6 @@
 # noopener-noreferrer-demo
 
-![GitHub license](https://img.shields.io/github/license/Skunkworks-Lab-Services/noopener-noreferrer-demo)
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![GitHub stars](https://img.shields.io/github/stars/Skunkworks-Lab-Services/noopener-noreferrer-demo)
 ![GitHub issues](https://img.shields.io/github/issues/Skunkworks-Lab-Services/noopener-noreferrer-demo)
 ![GitHub forks](https://img.shields.io/github/forks/Skunkworks-Lab-Services/noopener-noreferrer-demo)
