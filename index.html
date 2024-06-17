@@ -214,6 +214,14 @@
             <h2>Why use <code>rel="noopener noreferrer"</code>?</h2>
             <p>Using <code>rel="noopener noreferrer"</code> prevents the new page from being able to access the <code>window.opener</code> property and ensures it runs in a separate process. This is particularly important for security and performance reasons.</p>
 
+            <h2>Testing Instructions</h2>
+            <ol>
+                <li>Open the <strong>Example without noreferrer</strong> link. A new tab will open <code>malicious.html</code>.</li>
+                <li>Observe that <code>malicious.html</code> manipulates the original page by redirecting it to <code>hacked.html</code> or changing its content.</li>
+                <li>Open the <strong>Example with noreferrer</strong> link. A new tab will open <code>malicious.html</code>.</li>
+                <li>Observe that <code>malicious.html</code> fails to manipulate the original page because <code>window.opener</code> is <code>null</code>.</li>
+            </ol>
+
             <h2>Try It Yourself:</h2>
             <textarea id="code" rows="10" cols="50" class="language-html"><!DOCTYPE html>
 <html lang="en">
