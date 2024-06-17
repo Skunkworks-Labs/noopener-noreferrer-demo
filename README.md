@@ -6,7 +6,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/Skunkworks-Lab-Services/noopener-noreferrer-demo)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/Skunkworks-Lab-Services/noopener-noreferrer-demo)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Skunkworks-Lab-Services/noopener-noreferrer-demo)
-[![.github/workflows/ci.yml](https://github.com/Skunkworks-Lab-Services/noopener-noreferrer-dem/actions/workflows/ci.yml/badge.svg)](https://github.com/Skunkworks-Lab-Services/noopener-noreferrer-dem/actions/workflows/ci.yml)
+[![GH Pages](https://github.com/Skunkworks-Lab-Services/noopener-noreferrer-demo/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/Skunkworks-Lab-Services/noopener-noreferrer-demo/actions/workflows/gh-pages.yml)
 
 ## Overview
 
@@ -18,6 +18,7 @@ A hands-on interactive demo to learn and experiment with adding `rel="noopener n
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Wiki](#wiki)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -28,6 +29,8 @@ A hands-on interactive demo to learn and experiment with adding `rel="noopener n
 - **Responsive Design**: A simple and clean design that works well on all devices.
 
 ## Installation
+
+To set up and test the examples provided in this repository, follow the steps below:
 
 ```bash
 # Clone the repository
