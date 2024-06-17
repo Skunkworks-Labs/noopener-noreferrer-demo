@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -229,6 +230,22 @@
                 <li>Observe that <code>malicious.html</code> fails to manipulate the original page because the <code>window.opener</code> property is <code>null</code>.</li>
                 <li>By using <code>rel="noopener noreferrer"</code>, the original page is protected from any manipulation attempts by the new page, thus preventing potential phishing attacks.</li>
             </ol>
+
+            <h2>Explanation of <code>malicious.html</code></h2>
+            <p>
+                The <code>malicious.html</code> page has been styled to look like a legitimate Skunkworks Mail login page. 
+                It includes a form that checks for specific credentials (username: <code>skunkworks</code>, password: <code>password123</code>). 
+                If the correct credentials are entered, the user is redirected to <code>hacked.html</code>. Otherwise, an error message is displayed.
+                The page still attempts to manipulate the opener's content or URL to demonstrate the security risk.
+            </p>
+
+            <h2>Credentials for Redirection</h2>
+            <p>To be redirected to the <code>hacked.html</code> page, participants should use the following login credentials:</p>
+            <ul>
+                <li><strong>Username:</strong> skunkworks</li>
+                <li><strong>Password:</strong> password123</li>
+            </ul>
+            <p>This setup should provide a clear and realistic demonstration of the security implications and how the <code>rel="noopener noreferrer"</code> attribute helps mitigate such risks.</p>
 
             <h2>Try It Yourself:</h2>
             <textarea id="code" rows="10" cols="50" class="language-html"><!DOCTYPE html>
