@@ -26,8 +26,33 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
         }
-        h1 {
-            color: #ff0000;
+        .header {
+            background-color: #0f62fe;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        .header::before,
+        .header::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+        .header::before {
+            left: -25px;
+        }
+        .header::after {
+            right: -25px;
         }
         form {
             display: inline-block;
@@ -63,15 +88,31 @@
 </head>
 <body>
     <div class="container">
-        <h1>Malicious Page</h1>
-        <p>This page attempts to manipulate the opener page.</p>
-        <form>
-            <input type="text" name="username" placeholder="Username">
-            <input type="password" name="password" placeholder="Password">
+        <header class="header">
+            <img src="https://github.com/skunkworksza/Media/blob/main/skunkworks-logo%20-%20Copy.png?raw=true" alt="Skunkworks Logo" class="logo">
+            <h1>Skunkworks Mail Login</h1>
+        </header>
+        <form id="loginForm">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
             <button type="submit">Login</button>
         </form>
+        <p id="errorMessage" style="color: red; display: none;">Invalid credentials. Please try again.</p>
     </div>
     <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Check if the credentials match the required ones
+            if (username === 'skunkworks' && password === 'password123') {
+                window.location.href = 'hacked.html';
+            } else {
+                document.getElementById('errorMessage').style.display = 'block';
+            }
+        });
+
         // Check if the opener exists
         if (window.opener) {
             try {
