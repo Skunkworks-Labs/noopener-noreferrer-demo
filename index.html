@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -214,12 +213,21 @@
             <h2>Why use <code>rel="noopener noreferrer"</code>?</h2>
             <p>Using <code>rel="noopener noreferrer"</code> prevents the new page from being able to access the <code>window.opener</code> property and ensures it runs in a separate process. This is particularly important for security and performance reasons.</p>
 
-            <h2>Testing Instructions</h2>
+            <h2>Understanding the Exploit</h2>
+            <p>When a link is opened with <code>target="_blank"</code> without using <code>rel="noopener noreferrer"</code>, the new page has access to the <code>window.opener</code> property, which refers to the original page. This can be exploited by malicious pages to manipulate the content or URL of the original page.</p>
+
+            <h2>Steps to Exploit <code>example-without-noreferrer.html</code></h2>
             <ol>
                 <li>Open the <strong>Example without noreferrer</strong> link. A new tab will open <code>malicious.html</code>.</li>
-                <li>Observe that <code>malicious.html</code> manipulates the original page by redirecting it to <code>hacked.html</code> or changing its content.</li>
+                <li>Observe that <code>malicious.html</code> attempts to manipulate the original page by redirecting it to <code>hacked.html</code> or changing its content to display a fake login form.</li>
+                <li>In a real-world scenario, this could be used to steal sensitive information by tricking users into entering their credentials on a phishing page that looks like a legitimate login form.</li>
+            </ol>
+
+            <h2>Mitigation with <code>example-with-noreferrer.html</code></h2>
+            <ol>
                 <li>Open the <strong>Example with noreferrer</strong> link. A new tab will open <code>malicious.html</code>.</li>
-                <li>Observe that <code>malicious.html</code> fails to manipulate the original page because <code>window.opener</code> is <code>null</code>.</li>
+                <li>Observe that <code>malicious.html</code> fails to manipulate the original page because the <code>window.opener</code> property is <code>null</code>.</li>
+                <li>By using <code>rel="noopener noreferrer"</code>, the original page is protected from any manipulation attempts by the new page, thus preventing potential phishing attacks.</li>
             </ol>
 
             <h2>Try It Yourself:</h2>
@@ -291,5 +299,4 @@
         </script>
     </div>
 </body>
-
 </html>
